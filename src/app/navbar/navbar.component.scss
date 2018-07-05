@@ -38,10 +38,26 @@
                     text-decoration:none;
                     color:black;
                     text-transform:uppercase;
+                    position:relative;
                 }
 
                 a.hiddenOnHome{
                     display:none;
+                }
+
+                a::after{
+                    position:absolute;
+                    content:'';
+                    height:5px;
+                    width:0px;
+                    background-color:black;
+                    bottom:-5px;
+                    left:0;
+                }
+
+                a:hover::after{
+                    transition:width ease-in-out 250ms;
+                    width:100%;
                 }
             }
         }
