@@ -1,0 +1,68 @@
+.card{
+    height:100%;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    
+    &::after{
+        z-index:7;
+        position:absolute;
+        font-size:1.5rem;
+        color:black;
+        font-family: 'Roboto', sans-serif;
+        font-weight:bold;
+        text-transform:uppercase;
+    }
+
+    &:hover::before{
+        transition:opacity ease-in-out 150ms;
+        opacity:.15;
+    }
+
+    &:hover img{
+        transition:filter ease-in-out 150ms;
+        filter:blur(5px);
+    }
+
+    &::before{
+        z-index:6;
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        content:'';
+        background-color:black;
+        opacity:0;
+    }
+
+}
+
+
+
+
+
+.color{
+    position:relative;
+    img{
+        z-index:1;
+        content:url("//unsplash.it/1520/1001");
+    }
+
+    &::after{
+        content:'Color Photography';
+    }
+}
+
+.blackAndWhite{
+    img{
+        content:url("//unsplash.it/g/1000/1001");
+    }
+
+    &::after{
+        content: 'Black and White Photography';
+    }
+
+}

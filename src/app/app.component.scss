@@ -1,0 +1,19 @@
+#main_section{
+    display:grid;
+    grid-template-columns: auto auto;
+    height:100%;
+
+    & .left, & .right{
+        display:flex;
+        align-items:center;
+        justify-content: center;
+    }
+}
+
+app-picture-card{
+    height: calc(100vh - 96px);
+    width: 50vw;
+    max-width:50vw;
+    max-height: calc(100vh - 96px);
+    overflow:hidden;
+}
