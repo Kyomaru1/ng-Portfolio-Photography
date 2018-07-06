@@ -3,7 +3,7 @@
     width:100vw;
     
     display:grid;
-    grid-template-columns:40% auto;
+    grid-template-columns:30% auto;
     position:relative;
 
     
@@ -18,6 +18,47 @@
             text-transform:uppercase;
             font-weight:bold;
             margin-bottom:0;
+            text-decoration:none;
+            transition:color ease-in-out 300ms;
+            color:black;
+
+            &:hover{
+                transition:color ease-in-out 250ms;
+                color:yellow;
+            }
+        }
+
+        a.title_link::after{
+            content:'';
+            position:absolute;
+            height:calc(100% + 10px);
+            bottom:-5px;
+            left: -5px;
+            width:0;
+            transition:width ease-in-out 250ms;
+            background-color:black;
+            z-index:-1;
+        }
+
+        a.title_link::before{
+            content:'< Click for Home';
+            position:absolute;
+            left:30%;
+            top: calc(48px - 12px);
+            font-size:1rem;
+            color:white;
+            display:none;
+        }
+
+        a.title_link:hover::before{
+            display:inline-block;
+            transition:color ease-in-out 250ms;
+            color:yellow;
+        }
+
+        a.title_link:hover::after{
+            transition:width ease-in-out 250ms;
+            width:calc(100% + 10px);
         }
     }
 
@@ -99,6 +140,7 @@
 
 @media screen and (max-width:920px){
     #navContainer{
+        grid-template-columns:50% auto;
         & nav#navbar_large{
             ul{
                 li{
@@ -110,6 +152,10 @@
 
         & p a.title_link{
             font-size:1.5rem;
+
+            &::before{
+                left:50%;
+            }
         }
     }
 }
@@ -133,11 +179,11 @@
         justify-content: flex-end;
 
         & .menuButton{
-            background-color:white;
             height:96px;
             width:96px;
-            border:none;
-
+            display:flex;
+            align-items: center;
+            justify-content: center;
             & i{
                 font-size:2rem;
             }

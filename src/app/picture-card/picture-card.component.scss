@@ -14,20 +14,27 @@
         left:0;
         bottom:0;
         right:0;
-        justify-content: center;
-        align-content: center;
         transition:background-color ease-in-out 250ms;
         background-color:rgba(0,0,0,.2);
 
-        & p{
-            color:white;
-            font-family:'Roboto', sans-serif;
-            font-size:2rem;
-            font-weight:bold;
-            margin-top:50%;
-            text-transform: uppercase;
-            position:absolute;
+        & .inner{
+            position: relative;
+            width:100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+
+            & p{
+                color:white;
+                font-family:'Roboto', sans-serif;
+                font-size:2rem;
+                font-weight:bold;
+                text-transform: uppercase;
+                position:absolute;
+            }
         }
+
+
     }
 
     .overlay:hover{
@@ -80,6 +87,6 @@ img{
 
 @media screen and (max-width:517px){
     .overlay p{
-        font-size:1.5rem !important;
+        font-size:1rem !important;
     }
 }
