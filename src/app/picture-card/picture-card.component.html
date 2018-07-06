@@ -1,8 +1,10 @@
 <div class="card {{this.photoType}} {{this.isHeader}}">
-  <div class="overlay">
-    <div class="inner">
-      <p>{{this.overlay_text}}</p>
+  <a routerLink="{{this.route}}">
+    <div class="overlay">
+      <div class="inner">
+        <p >{{this.overlay_text}}</p>
+      </div>
     </div>
-  </div>
+  </a>
   <img src="//unsplash.it/1000/1000"/>
 </div>

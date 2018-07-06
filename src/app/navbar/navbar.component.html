@@ -1,11 +1,11 @@
 <div id='navContainer'>
-  <p><a class="title_link" href="#">Ardner Photography<i class="material-icons">camera</i></a></p>
+  <p><a class="title_link" href="#" routerLink="">Ardner Photography<i class="material-icons">camera</i></a></p>
   <nav id="navbar_large">
     <ul>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Pricing</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a class="c" routerLink="about" href="#">About</a></li>
+      <li><a class="y" routerLink="pricing" href="#">Pricing</a></li>
+      <li><a class="m" routerLink="blog" href="#">Blog</a></li>
+      <li><a class="k" routerLink="contact" href="#">Contact</a></li>
     </ul>
   </nav>
   <div class="small_nav">
@@ -15,10 +15,10 @@
 <div class="hidden_menu {{this.visibleState}}">
     <nav id="navbar_small">
         <ul>
-            <li><a href="#" ng-click="closeMenu">About</a></li>
-            <li><a href="#" ng-click="closeMenu">Pricing</a></li>
-            <li><a href="#" ng-click="closeMenu">Blog</a></li>
-            <li><a href="#" ng-click="closeMenu">Contact</a></li>
+            <li><a routerLink="about" href="#" ng-click="closeMenu">About</a></li>
+            <li><a routerLink="pricing" href="#" ng-click="closeMenu">Pricing</a></li>
+            <li><a routerLink="blog" href="#" ng-click="closeMenu">Blog</a></li>
+            <li><a routerLink="contact" href="#" ng-click="closeMenu">Contact</a></li>
           </ul>
       </nav>
 </div>

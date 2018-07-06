@@ -35,17 +35,6 @@
                 }
             }
         }
-
-        a.title_link:hover::before{
-            display:inline-block;
-            transition:color ease-in-out 250ms;
-            color:yellow;
-        }
-
-        a.title_link:hover::after{
-            transition:width ease-in-out 250ms;
-            width:calc(100% + 10px);
-        }
     }
 
     & nav#navbar_large{
@@ -95,9 +84,23 @@
                 }
 
                 a:hover{
-                    font-weight:bold;
-                    transition:color ease-in 265ms;
-                    color:white;
+                    &.c{
+                        color:cyan;
+                        transition:color ease-in 265ms;
+                    }
+                    &.y{
+                        color:yellow;
+                        transition:color ease-in 265ms;
+                    }
+                    &.m{
+                        color:magenta;
+                        transition:color ease-in 265ms;
+                    }
+                    &.k{
+                        color:white;
+                        transition:color ease-in 265ms;
+                    }
+                    
                 }
 
                 a{
