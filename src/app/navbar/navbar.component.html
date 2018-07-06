@@ -1,14 +1,24 @@
 <div id='navContainer'>
   <p><a class="title_link">Ardner Photography</a></p>
-  <nav id="navbar">
+  <nav id="navbar_large">
     <ul>
-      <li><a href="#" class="hiddenOnHome" >Home</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Pricing</a></li>
       <li><a href="#">Blog</a></li>
       <li><a href="#">Contact</a></li>
-
-      <li class="showOnlyOnSmallest"><a href=""><i class="material-icons">menu</i></a></li>
     </ul>
   </nav>
+  <div class="small_nav">
+      <button class="menuButton" ng-click="sayHello()"><i class="material-icons">menu</i></button>
+  </div>
+</div>
+<div class="hidden_menu {{this.visibleState}}">
+    <nav id="navbar_small">
+        <ul>
+            <li><a href="#" ng-click="closeMenu">About</a></li>
+            <li><a href="#" ng-click="closeMenu">Pricing</a></li>
+            <li><a href="#" ng-click="closeMenu">Blog</a></li>
+            <li><a href="#" ng-click="closeMenu">Contact</a></li>
+          </ul>
+      </nav>
 </div>

@@ -17,10 +17,11 @@
             margin-left:16px;
             text-transform:uppercase;
             font-weight:bold;
+            margin-bottom:0;
         }
     }
 
-    & nav#navbar{
+    & nav#navbar_large{
         float:right;
         display:flex;
         justify-content: flex-end;
@@ -81,21 +82,29 @@
     }
 }
 
-li.showOnlyOnSmallest{
-    display:none;
+@media screen and (max-width:1920px){
+    #navbar_large{
+        float:right;
+        margin-bottom:0;
+    }
+
+    .small_nav{
+        display:none;
+    }
+
+    .hidden_menu{
+        display:none;
+    }
 }
 
 @media screen and (max-width:920px){
     #navContainer{
-        & nav#navbar{
+        & nav#navbar_large{
             ul{
                 li{
                     font-size:1rem;
                 }
                 
-                li.showOnlyOnSmallest{
-                    display:none;
-                }
             }
         }
 
@@ -107,26 +116,60 @@ li.showOnlyOnSmallest{
 
 @media screen and (max-width:735px){
     #navContainer{
-        & nav#navbar{
-            ul{
-                li{
-                    display:none;
-
-                    a:hover::after{
-                        width:0px;
-                    }
-                    a:hover{
-                        color:black;
-                    }
-                }
-                li.showOnlyOnSmallest{
-                    display:inline-block;
-                }
-            }
+        & nav#navbar_large{
+           display:none;
         }
+
+        
 
         & p a.title_link{
             font-size:1.25rem;
         }
+    }
+
+    .small_nav{
+        float:right;
+        display:flex;
+        justify-content: flex-end;
+
+        & .menuButton{
+            background-color:white;
+            height:96px;
+            width:96px;
+            border:none;
+
+            & i{
+                font-size:2rem;
+            }
+        }
+
+        & .menuButton:active{
+            background-color:rgba(0,0,0,.2);
+        }
+    }
+
+    .hiddenMenu.isVisible{
+        position:absolute;
+        z-index:4;
+        width:100vw;
+        background-color:white;
+        ul{
+            li{
+                text-decoration:none;
+                margin-bottom:1rem;
+                a{
+                    text-decoration:none;
+                    color:black;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight:bold;
+                    text-transform: uppercase;
+                    font-size:2rem;
+                }
+            }
+        }
+    }
+
+    .hiddenMenu.isHidden{
+        display:none;
     }
 }
