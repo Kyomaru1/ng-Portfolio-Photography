@@ -22,32 +22,18 @@
             transition:color ease-in-out 300ms;
             color:black;
 
-            &:hover{
-                transition:color ease-in-out 250ms;
-                color:yellow;
+            & i.material-icons{
+                font-size:2.5rem;
+                position:absolute;
             }
-        }
 
-        a.title_link::after{
-            content:'';
-            position:absolute;
-            height:calc(100% + 10px);
-            bottom:-5px;
-            left: -5px;
-            width:0;
-            transition:width ease-in-out 250ms;
-            background-color:black;
-            z-index:-1;
-        }
-
-        a.title_link::before{
-            content:'< Click for Home';
-            position:absolute;
-            left:30%;
-            top: calc(48px - 12px);
-            font-size:1rem;
-            color:white;
-            display:none;
+            &:hover{
+                i.material-icons{
+                    transition:transform ease-in-out 750ms;
+                    transform:rotate(360deg);
+                    transform-origin: 20px 20px;
+                }
+            }
         }
 
         a.title_link:hover::before{
@@ -138,7 +124,18 @@
     }
 }
 
-@media screen and (max-width:920px){
+@media screen and (max-width:1250px) and (min-width:950px){
+    #navContainer{
+        & p a.title_link{
+            font-size:1.5rem;
+            & i.material-icons{
+                font-size:1.75rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:950px) and (min-width:820px){
     #navContainer{
         grid-template-columns:50% auto;
         & nav#navbar_large{
@@ -153,6 +150,10 @@
         & p a.title_link{
             font-size:1.5rem;
 
+            & i.material-icons{
+                font-size:1.75rem;
+            }
+
             &::before{
                 left:50%;
             }
@@ -160,7 +161,7 @@
     }
 }
 
-@media screen and (max-width:735px){
+@media screen and (max-width:820px){
     #navContainer{
         & nav#navbar_large{
            display:none;
@@ -170,6 +171,10 @@
 
         & p a.title_link{
             font-size:1.25rem;
+
+            & i.material-icons{
+                font-size:1.75rem;
+            }
         }
     }
 
