@@ -29,7 +29,7 @@
 
             &:hover{
                 i.material-icons{
-                    transition:transform ease-in-out 750ms;
+                    transition:transform ease-out 1000ms;
                     transform:rotate(360deg);
                     transform-origin: 20px 20px;
                 }
