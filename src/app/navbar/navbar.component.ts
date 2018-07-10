@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   visibleState: string = "isHidden";
-  isVisible: boolean = false;
+  menuVisible: boolean = false;
 
   constructor() { }
 
@@ -21,21 +21,22 @@ export class NavbarComponent implements OnInit {
   }
 
   toggleMenu(){
-    switch(this.isVisible){
+    switch(this.menuVisible){
       case true:
         this.visibleState = "isVisible";
-        this.isVisible = true;
+        this.menuVisible = false;
+        console.log('making hidden');
         break;
       case false:
         this.visibleState = "isHidden";
-        this.isVisible = false;
+        this.menuVisible = true;
+        console.log('making visible');
         break;
     }
-    console.log(this.visibleState);
   }
 
   closeMenu(){
-    this.isVisible = false;
+    this.menuVisible = false;
     this.visibleState = "isHidden";
   }
 
