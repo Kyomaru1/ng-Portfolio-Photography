@@ -137,7 +137,7 @@
     }
 }
 
-@media screen and (max-width:950px) and (min-width:820px){
+@media screen and (max-width:950px) and (min-width:821px){
     #navContainer{
         grid-template-columns:50% auto;
         & nav#navbar_large{
@@ -163,7 +163,7 @@
     }
 }
 
-@media screen and (max-width:820px){
+@media screen and (max-width:821px){
     #navContainer{
         & nav#navbar_large{
            display:none;
@@ -211,7 +211,7 @@
         ul{
             transition: opacity ease-in-out 100ms,
                         height linear 100ms;
-            transition-delay: 250ms;
+            transition-delay: 350ms;
             opacity:1;
             height:100%;
             list-style:none;
@@ -244,6 +244,8 @@
             height: 0;
             transition: opacity ease-in-out 100ms,
                         height linear 100ms;
+                        
+            display:none;
         }
     }
 }

@@ -16,21 +16,15 @@ export class NavbarComponent implements OnInit {
 
   }
 
-  sayHello(){
-    console.log("hello world");
-  }
-
   toggleMenu(){
     switch(this.menuVisible){
       case true:
-        this.visibleState = "isVisible";
+        this.visibleState = "isHidden";
         this.menuVisible = false;
-        console.log('making hidden');
         break;
       case false:
-        this.visibleState = "isHidden";
+        this.visibleState = "isVisible";
         this.menuVisible = true;
-        console.log('making visible');
         break;
     }
   }

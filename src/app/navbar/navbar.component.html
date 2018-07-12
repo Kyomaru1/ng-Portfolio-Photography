@@ -15,10 +15,11 @@
 <div class="hidden_menu {{this.visibleState}}">
     <nav id="navbar_small">
         <ul>
-            <li><a routerLink="about" href="#"   (click)="closeMenu()">About</a></li>
-            <li><a routerLink="pricing" href="#" (click)="closeMenu()">Pricing</a></li>
-            <li><a routerLink="blog" href="#"    (click)="closeMenu()">Blog</a></li>
-            <li><a routerLink="contact" href="#" (click)="closeMenu()">Contact</a></li>
+            <li routerLink=""        (click)="closeMenu()" ><a href="#"   >Home</a></li>
+            <li routerLink="about"   (click)="closeMenu()" ><a href="#"   >About</a></li>
+            <li routerLink="pricing" (click)="closeMenu()" ><a href="#"   >Pricing</a></li>
+            <li routerLink="blog"    (click)="closeMenu()" ><a href="#"   >Blog</a></li>
+            <li routerLink="contact" (click)="closeMenu()" ><a href="#"   >Contact</a></li>
           </ul>
       </nav>
 </div>
