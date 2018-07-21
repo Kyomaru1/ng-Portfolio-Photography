@@ -201,17 +201,19 @@
         }
     }
 
-    .hidden_menu{
+    .hidden_menu.isVisible{
         position:absolute;
         z-index:4;
         width:100vw;
         background-color:white;
-        transition:height ease-in-out 350ms;
+        //transition:height ease-in-out 350ms;
+        animation: menushow 350ms ease-in-out 1;
         height:100%;
         ul{
-            transition: opacity ease-in-out 100ms,
-                        height linear 100ms;
-            transition-delay: 350ms;
+            // transition: opacity ease-in-out 100ms,
+            //             height linear 100ms;
+            // transition-delay: 350ms;
+            animation: listshow 250ms ease-in-out 1;
             opacity:1;
             height:100%;
             list-style:none;
@@ -219,6 +221,8 @@
                 text-decoration:none;
                 margin-bottom:1rem;
                 height:96px;
+                position:relative;
+
                 a{
                     text-decoration:none;
                     color:black;
@@ -226,6 +230,19 @@
                     font-weight:bold;
                     text-transform: uppercase;
                     font-size:2rem;
+                    
+
+                    & p{
+                        position:absolute;
+                        left: calc(48px + calc(48px / 2));
+                    } 
+                    
+                    & svg{
+                        height:48px;
+                        width:48px;
+                        position:absolute; 
+                        top: calc(calc(96px / 2) - calc(48px / 2.5))
+                    }
                 }
             }
         }
@@ -237,6 +254,7 @@
         width:100vw;
         background-color:white;
         transition:height ease-in-out 350ms;
+        // animation: menuhide 350ms ease-in-out 1;
         height:0;
 
         ul{
@@ -244,8 +262,40 @@
             height: 0;
             transition: opacity ease-in-out 100ms,
                         height linear 100ms;
-                        
             display:none;
         }
+    }
+}
+
+@keyframes menushow{
+    0%{
+        height: 0;
+    }
+    100%{
+        height:100%;
+    }
+}
+
+@keyframes menuhide{
+    from{
+        height: 100%;
+    }
+    to{
+        height: 0;
+    }
+}
+
+@keyframes listshow{
+    0%{
+        opacity: 0;
+        height:0;
+    }
+    75%{
+        opacity:0;
+        height:0;
+    }
+    100%{
+        opacity: 1;
+        height:100%;
     }
 }
